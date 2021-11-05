@@ -1,4 +1,9 @@
+module "network" {
+  source  = "app.terraform.io/dbnaz/network/google"
+  version = "3.4.0"
+  # insert required variables here
 network_name = "nazeeya-network"
+
 project_id = var.project
 subnets = [
   {
@@ -7,3 +12,5 @@ subnets = [
     subnet_region = var.region
   }
 ]
+}
+
